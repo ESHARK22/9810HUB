@@ -5,24 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>9810hub</title>
   <link rel="stylesheet" href="styles.css">
+
+  // Github URL workaround part2
+  <script type="text/javascript">
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
+
+
 </head>
 <body>
   <div class="gradient-background" id="background">
     <div id="navbar">
-      <img id="logo" src="/9810HUB/logo.svg" alt="Your Logo">
+      <img id="logo" src="/logo.svg" alt="Your Logo">
       <div id="buttons1">
-        <a href="/9810HUB/roms/roms.html"><button class="button1">ROMS</button></a>
+        <a href="/roms/roms.html"><button class="button1">ROMS</button></a>
         <!--<a href="addons/addon.html"><button class="button1">ADDONS</button></a>-->
-        <a href="/9810HUB/help/help.html"><button class="button1">HELP CENTRE</button></a>
+        <a href="/help/help.html"><button class="button1">HELP CENTRE</button></a>
         <!--<a href="developer/developer.html"><button class="button1">DEVELOPER</button></a>-->
       </div>
     </div>
-    <img id="logocenter" src="/9810HUB/logo.svg" alt="Your Logo"9810HUB/>
+    <img id="logocenter" src="/logo.svg" alt="Your Logo"9810HUB/>
     <div class="button-container">
       <ul class="button-list">
-        <li><a href="/9810HUB/roms/roms.html"><button class="button2">ROMS</button></a></li>
+        <li><a href="/roms/roms.html"><button class="button2">ROMS</button></a></li>
         <!--<li><a href="addons/addon.html"><button class="button2">ADDONS</button></a></li>--> 
-        <li><a href="/9810HUB/help/help.html"><button class="button2">HELP CENTRE</button></a></li>
+        <li><a href="/help/help.html"><button class="button2">HELP CENTRE</button></a></li>
         <!--<<li><a href="developer/developer.html"><button class="button2">DEVELOPER</button></a></li>-->
       </ul>
     </div>
